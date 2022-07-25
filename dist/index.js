@@ -6106,7 +6106,7 @@ async function getGhCli(version) {
 }
 
 async function downloadGhCli(version) {
-  const toolDirectoryName = `gh-cli-v${version}`;
+  const toolDirectoryName = `gh_${version}_linux_amd64`;
   const downloadUrl = `https://github.com/cli/cli/releases/download/v${version}/gh_${version}_linux_amd64.tar.gz`;
   console.log(`downloading ${downloadUrl}`);
 
