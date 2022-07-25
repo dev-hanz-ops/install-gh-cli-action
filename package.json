@@ -1,0 +1,30 @@
+{
+  "name": "install-gh-cli-action",
+  "version": "0.0.1",
+  "description": "Download, cache and install the GH CLI to the workspace (GitHub Action)",
+  "main": "run.js",
+  "scripts": {
+    "build": "ncc build src/run.js -o dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-hanz-ops/install-gh-cli-action.git"
+  },
+  "keywords": [
+    "github",
+    "actions"
+  ],
+  "author": "dev-hanz-ops",
+  "bugs": {
+    "url": "https://github.com/dev-hanz-ops/install-gh-cli-action/issues"
+  },
+  "homepage": "https://github.com/dev-hanz-ops/install-gh-cli-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.0",
+    "@actions/tool-cache": "^2.0.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0"
+  }
+}

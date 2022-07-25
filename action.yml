@@ -1,0 +1,11 @@
+name: 'Install GH CLI'
+description: 'Download, cache and install the GH CLI to the workspace'
+author: 'dev-hanz-ops'
+inputs:
+  gh-cli-version:
+    description: 'Version of the GitHub-CLI that should be installed'
+    required: false
+    default: '2.14.2'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
