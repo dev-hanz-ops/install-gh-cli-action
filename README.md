@@ -1,0 +1,1 @@
+# Install GH CLI action
