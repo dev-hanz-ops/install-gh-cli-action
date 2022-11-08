@@ -1,0 +1,9 @@
+name: "CI"
+on:
+  push
+jobs:
+  install:
+    runs-on: ubunto-latest
+    steps:
+      - name: Install GH CLI
+        uses: ./
