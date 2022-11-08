@@ -3,7 +3,7 @@ on:
   push
 jobs:
   install:
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Install GH CLI
         uses: ./
