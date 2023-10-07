@@ -1,4 +1,4 @@
-name: 'Install GH CLI'
+name: 'Install GitHub CLI'
 description: 'Download, cache and install the GH CLI to the workspace'
 author: 'arimal199-org'
 inputs:
