@@ -25,8 +25,13 @@ async function getGhCli(version) {
 }
 
 async function downloadGhCli(version) {
-  const toolDirectoryName = `gh_${version}_linux_amd64`;
-  const downloadUrl = `https://github.com/cli/cli/releases/download/v${version}/gh_${version}_linux_amd64.tar.gz`;
+  let arch = 'amd64'; // Default to amd64 architecture
+  if (process.arch === 'arm64') {
+    arch = 'arm64'; // Change architecture to arm64 if running on arm64
+  }
+
+  const toolDirectoryName = `gh_${version}_linux_${arch}`;
+  const downloadUrl = `https://github.com/cli/cli/releases/download/v${version}/gh_${version}_linux_${arch}.tar.gz`;
   console.log(`downloading ${downloadUrl}`);
 
   try {
