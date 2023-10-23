@@ -6,7 +6,7 @@ Selfhosted runners do not come with the GH CLI out of the box. This action is an
 
 ```yaml
 - name: Install GH CLI
-  uses: dev-hanz-ops/install-gh-cli-action@0.1.0
+  uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
   with:
     gh-cli-version: 2.32.0
 ```
