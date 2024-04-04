@@ -7,5 +7,5 @@ inputs:
     required: false
     default: '2.14.2'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
