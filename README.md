@@ -8,7 +8,7 @@ As of now, only linux amd64 is supported.
 
 ```yaml
 - name: Install GH CLI
-  uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
+  uses: dev-hanz-ops/install-gh-cli-action@v0.2.0
   with:
     gh-cli-version: 2.32.0 # optional, see action.yml for current default
 ```
