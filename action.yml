@@ -7,7 +7,7 @@ inputs:
     required: false
     default: '2.14.2'
   gh-cli-arch:
-    description: 'Target architecture: amd64, arm64'
+    description: 'Target architecture: amd64, arm64, 386'
     default: amd64
 runs:
   using: 'node20'
