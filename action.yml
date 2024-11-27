@@ -6,6 +6,9 @@ inputs:
     description: 'Version of the GitHub-CLI that should be installed'
     required: false
     default: '2.14.2'
+  gh-cli-arch:
+    description: 'Target architecture: amd64, arm64'
+    default: amd64
 runs:
   using: 'node20'
   main: 'dist/index.js'
