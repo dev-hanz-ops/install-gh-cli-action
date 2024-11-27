@@ -6,6 +6,7 @@ async function run() {
   try {
     let version = core.getInput('gh-cli-version');
     let architecture = core.getInput('gh-cli-arch');
+    console.log(`Hello ${architecture}!`);
     if (version) {
       await getGhCli(version);
     }
@@ -39,5 +40,5 @@ async function downloadGhCli(version) {
     throw err;
   }
 }
-
+console.log("text");
 run();
