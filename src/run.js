@@ -5,32 +5,31 @@ import * as path from 'path';
 async function run() {
   try {
     let version = core.getInput('gh-cli-version');
-    let architecture = core.getInput('gh-cli-arch');
-    console.log(`Hello ${architecture}!`);
-    if (version && architecture) {
-      await getGhCli(version,architecture);
+    if (version) {
+      await getGhCli(version);
     }
   } catch (error) {
     core.setFailed(error.message);
   }
 }
 
-async function getGhCli(version,architecture) {
+async function getGhCli(version) {
   let toolPath = tc.find('gh-cli', version);
 
   if (!toolPath) {
-    toolPath = await downloadGhCli(version,architecture);
+    toolPath = await downloadGhCli(version);
   }
 
   toolPath = path.join(toolPath, 'bin');
   core.addPath(toolPath);
 }
 
-async function downloadGhCli(version,architecture) {
+async function downloadGhCli(version) {
+
+  let architecture = process.arch
   const toolDirectoryName = `gh_${version}_linux_${architecture}`;
   const downloadUrl = `https://github.com/cli/cli/releases/download/v${version}/gh_${version}_linux_${architecture}.tar.gz`;
   console.log(`downloading ${downloadUrl}`);
-
   try {
     const downloadPath = await tc.downloadTool(downloadUrl);
     const extractedPath = await tc.extractTar(downloadPath);
