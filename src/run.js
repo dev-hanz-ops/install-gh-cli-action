@@ -26,7 +26,10 @@ async function getGhCli(version) {
 
 async function downloadGhCli(version) {
 
-  let architecture = process.arch
+  let architecture = 'amd64';
+  if (process.arch == 'arm64') {
+    architecture = 'arm64';
+  }
   const toolDirectoryName = `gh_${version}_linux_${architecture}`;
   const downloadUrl = `https://github.com/cli/cli/releases/download/v${version}/gh_${version}_linux_${architecture}.tar.gz`;
   console.log(`downloading ${downloadUrl}`);
