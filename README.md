@@ -2,7 +2,7 @@
 
 Selfhosted runners do not come with the GH CLI out of the box. This action is an easy-to-use way to install it.
 
-Supports linux on amd64, arm and arm64 architectures.
+Supports linux on amd64 and arm64 architectures.
 
 ## Usage
 
