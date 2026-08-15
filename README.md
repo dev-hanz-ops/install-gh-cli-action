@@ -8,7 +8,7 @@ Supports linux on amd64 and arm64 architectures.
 
 ```yaml
 - name: Install GH CLI
-  uses: dev-hanz-ops/install-gh-cli-action@v0.2.1
+  uses: dev-hanz-ops/install-gh-cli-action@v0.3.0
   with:
     gh-cli-version: 2.65.0 # optional, see action.yml for current default
 ```
